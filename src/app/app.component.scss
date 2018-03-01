@@ -1,0 +1,47 @@
+
+$headerHeight: 60px;
+$navigationWidth: 300px;
+
+#header {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  box-sizing: border-box;
+
+  background-color: lightblue;
+  overflow: auto;
+  padding-left: 20px;
+  height: $headerHeight;
+
+  h1 {
+    margin: 0;
+
+  }
+}
+
+#navigation-pane {
+
+  position: absolute;
+  width: $navigationWidth;
+  top: $headerHeight;
+  bottom: 0;
+
+  color: white;
+  background-color: #383838;
+
+}
+
+
+#content {
+
+  position: absolute;
+  left: $navigationWidth;
+  right: 0;
+  top: $headerHeight;
+  bottom: 0;
+
+  padding: 20px;
+
+
+}
