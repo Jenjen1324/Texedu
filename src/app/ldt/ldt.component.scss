@@ -1,0 +1,109 @@
+/* Markdown inline highlight styles */
+::ng-deep .ldt {
+  min-height: 100%;
+
+  pre {
+    margin: 0;
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  img {
+    vertical-align: bottom;
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: inline;
+    cursor: text;
+
+    min-height: 100%;
+  }
+
+  .header {
+    color: blue;
+  }
+
+  .sub,
+  .sup {
+    color: goldenrod;
+  }
+  .code, .fence {
+    background: #eee;
+  }
+  .link {
+    color: blue;
+  }
+  .latex {
+    color: #7ca600;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .italic {
+    color: #0dd;
+  }
+  .strike {
+    text-decoration: line-through;
+  }
+  .latexBlock.keyword {
+    color: blue;
+  }
+  .latexBlock.keyword2 {
+    color: #0dd;
+  }
+  .latexBlock.keyword3 {
+    color: #8ECA81;
+  }
+  .latexBlock.bracket {
+    color: #ff0150;
+  }
+  .latexBlock.comment {
+    color: #aaa;
+  }
+  .latexBlock.index {
+    color: #f5d4a5;
+  }
+  .latexBlock.delimeter {
+    font-weight: bold;
+  }
+}
+
+#editor_textarea {
+
+  box-sizing: border-box;
+  width: 100%;
+  border: 0;
+  outline: 1px solid rgba(0, 0, 255, 0.18);
+
+
+  min-height: 100%;
+  height: auto;
+  background-color: transparent;
+  -webkit-text-fill-color: rgba(0,0,0,.2);
+
+  padding-bottom: 150px;
+
+  resize: none;
+}
+
+::ng-deep .ldt,
+::ng-deep .ldt label,
+#editor_textarea {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  font-size: 12pt;
+
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+
+#editor_textarea {
+}

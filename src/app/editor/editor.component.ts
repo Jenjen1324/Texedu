@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UpMathEditor} from './editor.class';
-import {TextareaDecorator} from 'ldt';
+import {Parser, TextareaDecorator} from '../ldt/textareaDecorator.class';
 
 
 @Component({
@@ -19,7 +19,6 @@ export class EditorComponent implements OnInit {
 
   constructor() {
     this.editor = new UpMathEditor();
-    let a = new TextareaDecorator();
 
   }
 

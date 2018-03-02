@@ -1,3 +1,5 @@
-<textarea (keyup)="editorChanged($event.target.value)"></textarea>
-<div [innerHtml]="preview">
+<div class="edit-wrapper">
+  <div id="preview" [innerHtml]="preview">
+  </div>
+  <app-ldt id="textInput" (keyup)="editorChanged($event.target.value)"></app-ldt>
 </div>

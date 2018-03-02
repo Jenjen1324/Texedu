@@ -43,5 +43,10 @@ $navigationWidth: 300px;
 
   padding: 20px;
 
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
 
 }
