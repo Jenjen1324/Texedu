@@ -1,11 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
 
-import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { EditorComponent } from './editor/editor.component';
-import { LdtComponent } from './ldt/ldt.component';
+import {AppComponent} from './app.component';
+import {NavigationComponent} from './navigation/navigation.component';
+import {EditorComponent} from './editor/editor.component';
+import {LdtComponent} from './ldt/ldt.component';
+import {BackendService} from './backend.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -16,9 +18,11 @@ import { LdtComponent } from './ldt/ldt.component';
     LdtComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BackendService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

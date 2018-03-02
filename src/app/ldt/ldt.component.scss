@@ -9,10 +9,6 @@
     word-wrap: break-word;
   }
 
-  img {
-    vertical-align: bottom;
-  }
-
   label {
     position: absolute;
     top: 0;
@@ -22,6 +18,10 @@
     cursor: text;
 
     min-height: 100%;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .header {

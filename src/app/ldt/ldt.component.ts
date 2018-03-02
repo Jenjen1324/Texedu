@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {MarkdownParser, TextareaDecorator} from './textareaDecorator.class';
 
 @Component({
@@ -8,7 +8,14 @@ import {MarkdownParser, TextareaDecorator} from './textareaDecorator.class';
 })
 export class LdtComponent implements OnInit {
 
+  @Input() editorContent: String;
+  @Output() editorChanged = new EventEmitter<String>();
+
   constructor() {
+  }
+
+  onKeyUp(text: String) {
+    this.editorChanged.emit(text);
   }
 
   ngOnInit() {
@@ -64,6 +71,9 @@ export class LdtComponent implements OnInit {
     const decorator = new TextareaDecorator(
       document.getElementById('editor_textarea'),
       mdParser);
+
+    this.onKeyUp(this.editorContent);
+    decorator.update();
   }
 
 }

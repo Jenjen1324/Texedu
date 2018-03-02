@@ -17,6 +17,10 @@
   ::ng-deep > :first-child {
     margin-top: 0;
   }
+
+  ::ng-deep img {
+    vertical-align: bottom;
+  }
 }
 
 #textInput {

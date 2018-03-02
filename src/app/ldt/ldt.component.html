@@ -1,2 +1,1 @@
-<textarea
-  id="editor_textarea"></textarea>
+<textarea id="editor_textarea" (keyup)="onKeyUp($event.target.value)" [innerHtml]="">{{editorContent}}</textarea>
